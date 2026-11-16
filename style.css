@@ -100,6 +100,31 @@
             transform: rotate(-1deg)
         }
 
+        .brand-lockup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(12px, 2vw, 22px);
+        }
+
+        .brand-mark {
+            display: block;
+            width: clamp(54px, 8vw, 88px);
+            aspect-ratio: 1;
+            object-fit: contain;
+            border-radius: 50%;
+            box-shadow: 0 3px 12px #21160f30;
+            animation: record-spin 8s linear infinite;
+        }
+
+        @keyframes record-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .brand-mark { animation: none; }
+        }
+
         h1 {
             margin: 0;
             color: var(--coffee);
