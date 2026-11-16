@@ -265,7 +265,8 @@
             box-shadow: 5px 10px 18px #28190f2b
         }
 
-        .drink-photo-placeholder {
+        .drink-photo-placeholder,
+        .drink-thumb-placeholder {
             aspect-ratio: 3 / 4;
             width: 100%;
             margin: 0 0 12px;
@@ -282,10 +283,186 @@
             letter-spacing: .12em
         }
 
-        .drink-photo-placeholder small {
+        .drink-photo-placeholder small,
+        .drink-thumb-placeholder small {
             font: .62rem 'Courier Prime', monospace;
             letter-spacing: .1em
         }
+
+        .drink-thumb {
+            display: block;
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            margin: 0 0 12px;
+            border: 1px solid #73695d;
+            filter: sepia(.25) contrast(1.04)
+        }
+
+        .drink-thumb.sangue-latino-thumb { object-position: 72% center; }
+
+        .drink-card h3 {
+            min-height: 2.4em;
+            margin: 0 0 12px;
+            color: var(--coffee);
+            font: 1.08rem/1.2 'Special Elite', cursive
+        }
+
+        .view-more {
+            display: block;
+            margin-top: 8px;
+            padding: 9px 10px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--paper);
+            background: var(--coffee);
+            border: 1px solid #21100e;
+            font: .76rem 'Special Elite', cursive;
+            letter-spacing: .1em;
+            transition: background .2s
+        }
+
+        .view-more:hover, .view-more:focus-visible {
+            background: var(--red);
+            outline: 2px solid #fff;
+            outline-offset: 2px
+        }
+
+        .drink-detail-header {
+            padding: 22px 0 25px;
+            text-align: center;
+            border-bottom: 4px double var(--coffee)
+        }
+
+        .back-to-archive {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--red-dark);
+            font: .75rem 'Special Elite', cursive;
+            letter-spacing: .08em;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px
+        }
+
+        .detail-kicker {
+            margin: 0 0 8px;
+            color: var(--red);
+            font-size: .68rem;
+            letter-spacing: .15em
+        }
+
+        .drink-detail-header h1 {
+            margin: 0;
+            color: var(--coffee);
+            font: clamp(2.4rem, 7vw, 5rem)/.98 'Special Elite', cursive;
+            letter-spacing: 0
+        }
+
+        .detail-subtitle {
+            margin: 10px 0 0;
+            color: var(--muted);
+            font: .82rem 'Special Elite', cursive;
+            letter-spacing: .12em
+        }
+
+        .drink-detail {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 35px 0 10px
+        }
+
+        .detail-photo-pair {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(14px, 3vw, 28px);
+            max-width: 850px;
+            margin: 0 auto 38px
+        }
+
+        .detail-photo {
+            min-width: 0;
+            margin: 0;
+            padding: 10px 10px 13px;
+            background: var(--white);
+            border: 1px solid #d3c3a7;
+            box-shadow: 3px 5px 12px #28190f18
+        }
+
+        .detail-photo img,
+        .detail-photo-placeholder {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border: 1px solid #73695d
+        }
+
+        .detail-photo img { filter: sepia(.25) contrast(1.04); }
+
+        .sangue-latino-focus { object-position: 72% center; }
+
+        .menu-intro { margin: -8px 0 18px; color: var(--muted); font-size: .84rem; font-style: italic; }
+
+        .detail-photo-placeholder {
+            gap: 8px;
+            padding: 12px;
+            text-align: center;
+            background: repeating-linear-gradient(135deg, #e6dac3 0 12px, #efe6d5 12px 24px);
+            color: #766b59;
+            font: .78rem 'Special Elite', cursive;
+            letter-spacing: .12em
+        }
+
+        .detail-photo-placeholder small {
+            font: .62rem 'Courier Prime', monospace;
+            letter-spacing: .08em
+        }
+
+        .detail-photo figcaption {
+            margin-top: 9px;
+            color: var(--muted);
+            text-align: center;
+            font: .72rem 'Special Elite', cursive;
+            letter-spacing: .08em
+        }
+
+        .detail-record-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px
+        }
+
+        .record-panel {
+            padding: 18px;
+            border: 1px dashed var(--line);
+            background: #fff9ec88
+        }
+
+        .record-panel h2 {
+            margin: 0 0 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px dotted var(--line);
+            color: var(--coffee);
+            font: 1.15rem 'Special Elite', cursive
+        }
+
+        .record-panel p {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .record-wide { grid-column: 1 / -1; }
+
+        .record-source {
+            margin: 16px 0 0 !important;
+            font-size: .65rem !important;
+            letter-spacing: .1em
+        }
+
+        .record-source a { color: var(--red-dark); }
+
 
         .evidence {
             align-self: flex-start;
@@ -462,6 +639,26 @@
             outline-offset: -7px;
             background: linear-gradient(112deg, #e6dac3 0%, #f6efdf 58%, #e9ddc7 100%);
             box-shadow: 4px 6px 14px #21160f1c;
+        }
+
+        .partner-ad-body {
+            display: grid;
+            grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+            align-items: center;
+            gap: clamp(18px, 3vw, 32px);
+            padding-top: 16px
+        }
+
+        .partner-ad-copy { min-width: 0; }
+
+        .partner-ad-image {
+            display: block;
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border: 1px solid #6f5a3e;
+            filter: sepia(.12) contrast(1.03);
+            box-shadow: 2px 4px 10px #21160f26
         }
 
         .partner-ad-head {
@@ -671,6 +868,21 @@
             .drink-card {
                 flex-basis: min(82vw, 320px)
             }
+
+            .partner-ad-body {
+                grid-template-columns: 1fr
+            }
+
+            .partner-ad-image { max-height: none; }
+
+            .detail-photo-pair,
+            .detail-record-grid {
+                grid-template-columns: 1fr
+            }
+
+            .record-wide { grid-column: auto; }
+
+            .drink-detail-header h1 { font-size: clamp(2rem, 10vw, 3.2rem); }
         }
 
         @media(prefers-reduced-motion:reduce) {
