@@ -333,6 +333,24 @@
             font: 1.08rem/1.2 'Special Elite', cursive
         }
 
+        .drink-author-card {
+            margin: -7px 0 2px;
+            color: var(--muted);
+            font: .62rem 'Courier Prime', monospace;
+            line-height: 1.25
+        }
+
+        .drink-author-detail {
+            margin: 26px 0 0;
+            padding: 16px;
+            border: 2px solid var(--red);
+            background: #fff9ec;
+            color: var(--coffee);
+            text-align: center;
+            font: 1rem 'Special Elite', cursive;
+            letter-spacing: .04em
+        }
+
         .view-more {
             display: block;
             margin-top: 8px;
